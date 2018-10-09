@@ -9,7 +9,7 @@ threat.
 PS. The team with best implementation of this software will get Stark Internship ;)
 
 ### Basic Features:
-- [ ] A user account where each user can be content creator or viewer (or both).
+- [X] A user account where each user can be content creator or viewer (or both).
 - [ ] Content creators can have multiple channels that they can manage.
 - [ ] Content creators can add video to any of their channels.
 - [ ] Viewers can subscribe to any channel and they must also get notified every time a new video is added to the channel they are subscribed to.
