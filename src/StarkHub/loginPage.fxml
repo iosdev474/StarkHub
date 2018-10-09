@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="427.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StarkHub.loginPageController">
+   <children>
+      <AnchorPane prefHeight="528.0" prefWidth="302.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" layoutX="164.0" layoutY="222.0" prefHeight="34.0" prefWidth="99.0" text="Login" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="passwordTextField" focusColor="RED" layoutX="40.0" layoutY="292.0" prefHeight="26.0" prefWidth="348.0" promptText="Password" unFocusColor="WHITE" />
+            <JFXTextField fx:id="ipTextField" focusColor="RED" layoutX="40.0" layoutY="328.0" prefHeight="27.0" prefWidth="348.0" promptText="IP" unFocusColor="WHITE" />
+            <Label alignment="CENTER" layoutX="14.0" layoutY="79.0" mouseTransparent="true" prefHeight="50.0" prefWidth="400.0" text="Welcome to StarkHub" textAlignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="169.0" layoutY="386.0" onAction="#login" prefHeight="34.0" prefWidth="90.0" text="Log in">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="315.0" layoutY="421.0" onAction="#createNewAccount" text="Create account " />
+            <Label fx:id="errorLabel" layoutX="15.0" layoutY="424.0" prefHeight="18.0" prefWidth="287.0" textFill="#f00000" />
+            <JFXButton cancelButton="true" layoutX="380.0" layoutY="11.0" onAction="#close" prefHeight="38.0" prefWidth="39.0" text="✗">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <AnchorPane layoutY="462.0" prefHeight="15.0" prefWidth="427.0" style="-fx-background-color: red;" />
+            <AnchorPane layoutY="452.0" prefHeight="7.0" prefWidth="427.0" style="-fx-background-color: red;" />
+            <Label layoutX="13.0" layoutY="13.0" text="⚶" textFill="RED">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
