@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StarkHub.userDashboardController">
+   <children>
+      <SplitPane dividerPositions="0.5025125628140703" layoutY="-4.0" orientation="VERTICAL" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: red;">
+         <items>
+            <AnchorPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="600.0">
+               <children>
+                  <JFXButton buttonType="RAISED" layoutX="804.0" layoutY="8.0" onAction="#search" prefHeight="25.0" prefWidth="100.0" text="Search" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#8efffd" />
+                              <Stop color="WHITE" offset="0.007662835249042145" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXTextField fx:id="searchTextField" focusColor="WHITE" layoutX="454.0" layoutY="8.0" prefHeight="25.0" prefWidth="350.0" promptText="Search" unFocusColor="RED" />
+                  <JFXButton buttonType="RAISED" layoutX="1144.0" layoutY="8.0" onAction="#paidMembership" prefHeight="25.0" prefWidth="120.0" text="Paid Membership" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#8efffd" />
+                              <Stop color="WHITE" offset="0.007662835249042145" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="1044.0" layoutY="7.0" onAction="#mychannel" prefHeight="25.0" prefWidth="100.0" text="My channel" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#8efffd" />
+                              <Stop color="WHITE" offset="0.007662835249042145" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="974.0" layoutY="8.0" onAction="#addVideo" prefHeight="25.0" prefWidth="70.0" text="Upload" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#8efffd" />
+                              <Stop color="WHITE" offset="0.007662835249042145" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <Text fill="WHITE" layoutX="38.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="StarkHub" wrappingWidth="90.99998474121094">
+                     <font>
+                        <Font name="HP Simplified" size="20.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="8.0" layoutY="6.0" text="⚶" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="notificationButton" buttonType="RAISED" layoutX="943.0" layoutY="8.0" onAction="#notification" text="0" textFill="WHITE">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="WHITE" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <SplitPane dividerPositions="0.19874804381846636" prefHeight="670.0" prefWidth="1280.0">
+                     <items>
+                        <AnchorPane minWidth="-Infinity" prefHeight="160.0" prefWidth="250.0">
+                           <children>
+                              <JFXListView fx:id="libraryListView" layoutX="1.0" layoutY="248.0" prefHeight="210.0" prefWidth="250.0" />
+                              <JFXListView fx:id="subscriptionListView" layoutX="1.0" layoutY="458.0" prefHeight="210.0" prefWidth="250.0" />
+                              <JFXButton buttonType="RAISED" layoutX="1.0" onAction="#home" prefHeight="35.0" prefWidth="250.0" text="Home">
+                                 <ripplerFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#8efffd" />
+                                          <Stop color="#ff9c00" offset="0.007662835249042145" />
+                                          <Stop color="RED" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </ripplerFill>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="70.0" onAction="#trending" prefHeight="35.0" prefWidth="250.0" text="Trending">
+                                 <ripplerFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#8efffd" />
+                                          <Stop color="#ff9c00" offset="0.007662835249042145" />
+                                          <Stop color="RED" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </ripplerFill>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="105.0" onAction="#playlist" prefHeight="35.0" prefWidth="250.0" text="Playlist">
+                                 <ripplerFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#8efffd" />
+                                          <Stop color="#ff9c00" offset="0.007662835249042145" />
+                                          <Stop color="RED" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </ripplerFill>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="140.0" onAction="#history" prefHeight="35.0" prefWidth="250.0" text="History">
+                                 <ripplerFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#8efffd" />
+                                          <Stop color="#ff9c00" offset="0.007662835249042145" />
+                                          <Stop color="RED" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </ripplerFill>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="175.0" onAction="#watchlater" prefHeight="35.0" prefWidth="250.0" text="Watch later">
+                                 <ripplerFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#8efffd" />
+                                          <Stop color="#ff9c00" offset="0.007662835249042145" />
+                                          <Stop color="RED" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </ripplerFill>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="35.0" onAction="#subscriptions" prefHeight="35.0" prefWidth="250.0" text="Subscriptions">
+                                 <ripplerFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#8efffd" />
+                                          <Stop color="#ff9c00" offset="0.007662835249042145" />
+                                          <Stop color="RED" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </ripplerFill>
+                              </JFXButton>
+                              <JFXButton buttonType="RAISED" layoutX="2.0" layoutY="210.0" onAction="#likedVideos" prefHeight="35.0" prefWidth="250.0" text="Liked videos">
+                                 <ripplerFill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop color="#8efffd" />
+                                          <Stop color="#ff9c00" offset="0.007662835249042145" />
+                                          <Stop color="RED" offset="1.0" />
+                                       </stops>
+                                    </LinearGradient>
+                                 </ripplerFill>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="160.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+                           <children>
+                              <ScrollPane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="1018.0">
+                                 <content>
+                                    <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="664.0" prefWidth="1006.0">
+                                       <children>
+                                          <JFXListView fx:id="myVideoList" layoutX="508.0" prefHeight="463.0" prefWidth="508.0" />
+                                          <JFXListView fx:id="myPlaylistList" prefHeight="464.0" prefWidth="508.0" />
+                                          <Pane fx:id="channelPane" layoutY="464.0" prefHeight="210.0" prefWidth="1018.0">
+                                             <children>
+                                                <JFXSpinner fx:id="uptimeSpinner" layoutX="716.0" layoutY="22.0" prefHeight="157.0" prefWidth="176.0" progress="1.0" />
+                                                <Label layoutX="14.0" layoutY="69.0" prefHeight="62.0" prefWidth="97.0" text="Subscriptions:" />
+                                                <Label fx:id="subscriptionLabel" layoutX="120.0" layoutY="13.0" prefHeight="174.0" prefWidth="311.0" text="0" />
+                                                <Label layoutX="590.0" layoutY="171.0" prefHeight="17.0" prefWidth="55.0" text="Views" />
+                                                <Label fx:id="viewLabel" layoutX="658.0" layoutY="171.0" prefHeight="17.0" prefWidth="146.0" text="0" />
+                                                <Label layoutX="590.0" layoutY="43.0" prefHeight="17.0" prefWidth="55.0" text="Likes" />
+                                                <Label fx:id="likesLabel" layoutX="658.0" layoutY="43.0" prefHeight="17.0" prefWidth="146.0" text="0" />
+                                                <JFXButton buttonType="RAISED" layoutX="9.0" layoutY="153.0" onAction="#subscribe" text="Subscribe">
+                                                   <ripplerFill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop color="#ffa000" />
+                                                            <Stop color="WHITE" offset="1.0" />
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </ripplerFill></JFXButton>
+                                                <JFXButton buttonType="RAISED" layoutX="904.0" layoutY="166.0" onAction="#viewVideo" text="View Video">
+                                                   <ripplerFill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop color="#ffa000" />
+                                                            <Stop color="WHITE" offset="1.0" />
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </ripplerFill></JFXButton>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</Pane>

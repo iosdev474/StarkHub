@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXChipView?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StarkHub.addVideoController">
+   <children>
+      <JFXButton fx:id="menuButton1" layoutX="18.0" layoutY="16.0" onAction="#menuButton1OnClickAction" prefHeight="60.0" prefWidth="415.0" text="Basic Information" />
+      <JFXButton fx:id="menuButton2" layoutX="433.0" layoutY="16.0" onAction="#menuButton2OnClickAction" prefHeight="60.0" prefWidth="415.0" text="Advance Information" />
+      <JFXButton fx:id="menuButton3" layoutX="844.0" layoutY="16.0" onAction="#menuButton3OnClickAction" prefHeight="60.0" prefWidth="422.0" text="Confirm Details" />
+      <AnchorPane fx:id="pane3" layoutY="65.0" prefHeight="656.0" prefWidth="1280.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="40.0" layoutY="183.0" prefHeight="60.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" text="Password:">
+                     <font>
+                        <Font name="Cantarell Thin" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXPasswordField fx:id="passwordField" layoutX="265.0" layoutY="10.0" prefHeight="40.0" prefWidth="400.0" promptText="Your password" />
+               </children>
+            </AnchorPane>
+            <JFXButton buttonType="RAISED" layoutX="1193.0" layoutY="602.0" onAction="#checkAndAddVideo" style="-fx-background-color: LIGHTCYAN;" text="Next">
+               <font>
+                  <Font name="Cantarell Light" size="20.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="0.8413461538461539" endY="1.0">
+                     <stops>
+                        <Stop color="#08e2ff" />
+                        <Stop color="#61db18" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <Text layoutX="332.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your password to confirm you.">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <StackPane fx:id="stackPane" layoutX="983.0" layoutY="390.0" prefHeight="150.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane2" layoutY="65.0" prefHeight="656.0" prefWidth="1280.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="40.0" layoutY="78.0" prefHeight="114.0" prefWidth="792.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" text="Tags:">
+                     <font>
+                        <Font name="Cantarell Thin" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXChipView fx:id="tagChipView" layoutX="211.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="503.0" prefHeight="162.0" prefWidth="573.0" style="-fx-background-color: #f0f0f0;" />
+                  <Line endX="450.0" layoutX="263.0" layoutY="100.0" startX="-52.0" />
+               </children>
+            </AnchorPane>
+            <JFXButton buttonType="RAISED" layoutX="1193.0" layoutY="602.0" onAction="#menuButton3OnClickAction" style="-fx-background-color: LIGHTCYAN;" text="Next">
+               <font>
+                  <Font name="Cantarell Light" size="20.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="0.8413461538461539" endY="1.0">
+                     <stops>
+                        <Stop color="#08e2ff" />
+                        <Stop color="#61db18" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <AnchorPane layoutX="40.0" layoutY="328.0" prefHeight="60.0" prefWidth="730.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" text="Category:">
+                     <font>
+                        <Font name="Cantarell Thin" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="categoryComboBox" layoutX="288.0" layoutY="10.0" prefHeight="40.0" prefWidth="154.0" promptText="Select Category" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="40.0" layoutY="419.0" prefHeight="60.0" prefWidth="730.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" text="Video Langauge:">
+                     <font>
+                        <Font name="Cantarell Thin" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="videoLangaugeComboBox" layoutX="288.0" layoutY="10.0" prefHeight="40.0" prefWidth="154.0" promptText="Select Langauge" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="40.0" layoutY="503.0" prefHeight="60.0" prefWidth="730.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" text="Date Recorded">
+                     <font>
+                        <Font name="Cantarell Thin" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXDatePicker fx:id="dateRecordedDatePicker" layoutX="271.0" layoutY="16.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="40.0" layoutY="246.0" prefHeight="60.0" prefWidth="730.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" text="Thumbnail:">
+                     <font>
+                        <Font name="Cantarell Thin" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="thumbnailPathTextField" editable="false" layoutX="214.0" layoutY="10.0" prefHeight="40.0" prefWidth="400.0" />
+                  <JFXButton layoutX="617.0" layoutY="8.0" onAction="#chooseThumbnail" prefHeight="42.0" prefWidth="93.0" text="Choose" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane1" layoutY="65.0" prefHeight="656.0" prefWidth="1280.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane layoutX="40.0" layoutY="80.0" prefHeight="60.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" text="Video Name: ">
+                     <font>
+                        <Font name="Cantarell Thin" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="videoNameTextField" layoutX="204.0" layoutY="10.0" prefHeight="40.0" prefWidth="753.0" promptText="Video Name">
+                     <font>
+                        <Font name="Cantarell Light" size="18.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="40.0" layoutY="204.0" prefHeight="183.0" prefWidth="1051.0" AnchorPane.leftAnchor="40.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" text="Description:">
+                     <font>
+                        <Font name="Cantarell Thin" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="descriptionField" layoutX="209.0" layoutY="14.0" prefHeight="142.0" prefWidth="760.0" promptText="Description" />
+               </children>
+            </AnchorPane>
+            <JFXButton buttonType="RAISED" layoutX="1193.0" layoutY="602.0" onAction="#menuButton2OnClickAction" style="-fx-background-color: LIGHTCYAN;" text="Next">
+               <font>
+                  <Font name="Cantarell Light" size="20.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="0.8413461538461539" endY="1.0">
+                     <stops>
+                        <Stop color="#08e2ff" />
+                        <Stop color="#61db18" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <AnchorPane layoutX="40.0" layoutY="508.0" prefHeight="60.0" prefWidth="600.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" text="Channel:">
+                     <font>
+                        <Font name="Cantarell Thin" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="channelNameComboBox" layoutX="214.0" layoutY="17.0" prefHeight="27.0" prefWidth="293.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="40.0" layoutY="406.0" prefHeight="60.0" prefWidth="957.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="40.0" prefWidth="200.0" text="Video Path:">
+                     <font>
+                        <Font name="Cantarell Thin" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="videoPathTextField" editable="false" layoutX="204.0" layoutY="10.0" prefHeight="40.0" prefWidth="642.0" promptText="Video Path">
+                     <font>
+                        <Font name="Cantarell Light" size="18.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton layoutX="850.0" layoutY="9.0" onAction="#chooseVideo" prefHeight="42.0" prefWidth="93.0" text="Choose" />
+               </children>
+            </AnchorPane>
+            <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="602.0" onAction="#back" style="-fx-background-color: #FFCCBD#FFCCBD;" text="Cancel">
+               <font>
+                  <Font name="Cantarell Light" size="20.0" />
+               </font>
+               <ripplerFill>
+                  <LinearGradient endX="0.8413461538461539" endY="1.0">
+                     <stops>
+                        <Stop color="#e6ff0a" />
+                        <Stop color="#d91818" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
